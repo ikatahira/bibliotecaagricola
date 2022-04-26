@@ -1,5 +1,7 @@
 package application.models;
 
+import java.security.Identity;
+
 import javax.persistence.Entity;
 
 import javax.persistence.GeneratedValue;
@@ -15,41 +17,23 @@ import javax.persistence.Table;
 
 @Entity
 
-@Table(name="livros")
+@Table(name="generos")
 
-public class Livro{
-
+public class Genero {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-
-
     private int id;
-
-    private String titulo;
-
-
-
-    public int getId() {
-
-        return id;
-
-    }public void setId(int id) {
-
+    private String nome;
+    public void setId(int id) {
         this.id = id;
-
     }
-
-   
-
-    public String getTitulo() {
-
-        return titulo;
-
-    }public void setTitulo(String titulo) {
-
-        this.titulo = titulo;
-
+    public void setNome(String nome) {
+        this.nome = nome;
     }
-
+    public int getId() {
+        return id;
+    }
+    public String getNome() {
+        return nome;
+    }
 }
